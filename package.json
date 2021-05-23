@@ -1,0 +1,36 @@
+{
+  "name": "food_delivery",
+  "version": "1.0.0",
+  "description": "This is an exercise for me to implement an application about restaurants and food delivery",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ambaqinejad/FoodDelivery.git"
+  },
+  "keywords": [
+    "Node.js",
+    "Express.js",
+    "Mysql",
+    "Sequelize",
+    "Express-Session"
+  ],
+  "author": "Amir Hosein Baqinejad (ambaqinejad)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ambaqinejad/FoodDelivery/issues"
+  },
+  "homepage": "https://github.com/ambaqinejad/FoodDelivery#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
