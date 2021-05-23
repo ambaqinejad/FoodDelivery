@@ -1,29 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%- include('../../components/libraries/bootstrap-css.ejs') %>
-    <%- include('../../components/custom/general-css.ejs') %>
-    <link rel="stylesheet" href="/css/register.css">
-    <title><%= title %></title>
+        <%- include('../../components/custom/general-css.ejs') %>
+            <link rel="stylesheet" href="/css/register.css" />
+            <title>
+                <%= title %>
+            </title>
 </head>
-<body class="d-flex justify-content-center align-items-center
-             height-100">
+
+<body class="d-flex justify-content-center align-items-center height-100">
     <div class="container p-3">
-        <div class="row
-                    round-border-100 register-bg">
-            <div class="col">
-            </div>
-            <div class="col-sm-12 col-md-8 col-lg-6
-                        d-flex justify-content-center align-items-center
-                        round-border-100-left register-form">
-                
+        <div class="row round-border-100 register-bg">
+            <div class="col"></div>
+            <div class="
+            col-sm-12 col-md-8 col-lg-6
+            d-flex
+            justify-content-center
+            align-items-center
+            round-border-100-left
+            register-form
+          ">
+                <form class="col-8">
+                    <div class="mb-3 col-sm-12">
+                        <label for="restaurant_name" class="form-label mb-2">نام رستوران:</label>
+                        <input type="text" class="form-control form-input" id="restaurant_name" />
+                    </div>
+
+                    <div class="mb-3 col-sm-12">
+                        <label for="restaurant_email" class="form-label mb-2">ایمیل رستوران:</label>
+                        <input type="email" class="form-control form-input mb-2" id="restaurant_email" />
+                        <div id="emailHelp" class="form-text form-hint">
+                            ورود ایمیل رستوران جهت اطلاع رسانی ضروری است.
+                        </div>
+                    </div>
+
+                    <div class="mb-3 col-sm-12">
+                        <label for="restaurant_address" class="form-label mb-2">آدرس رستوران:</label>
+                        <textarea class="restaurant-address form-text form-input" id="restaurant_address"></textarea>
+                    </div>
+
+                    <div class="mb-3 col-sm-12">
+                        <div>
+                            <label for="restaurant_delivery" class="form-label mb-2">پیک موتوری:</label>
+                        </div>
+                        <div class="form-check d-flex align-items-center">
+                            <input class="form-check-input radio-border ms-3" type="radio"
+                                name="restaurant_delivery id=" restaurant_delivery1" checked>
+                            <label class="form-check-label" for="restaurant_delivery1">
+                                دارد
+                            </label>
+                        </div>
+                        <div class="form-check d-flex align-items-center">
+                            <input class="form-check-input radio-border ms-3" type="radio"
+                                name="restaurant_delivery id=" restaurant_delivery2">
+                            <label class="form-check-label" for="restaurant_delivery2">
+                                ندارد
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 col-sm-12">
+                        <label for="restaurant_password" class="form-label mb-2">رمز عبور:</label>
+                        <input type="password" class="form-control form-input" id="restaurant_password" />
+                    </div>
+
+                    <div class="mb-3 col-sm-12">
+                        <label for="restaurant_password_again" class="form-label mb-2">تکرار رمز عبور:</label>
+                        <input type="password" class="form-control form-input" id="restaurant_password_again"/>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
             </div>
         </div>
     </div>
-    
+
     <%- include('../../components/libraries/bootstrap-js.ejs') %>
 </body>
+
 </html>

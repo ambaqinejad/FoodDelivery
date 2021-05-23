@@ -8,7 +8,7 @@ const path = require("path");
 const express = require("express");
 
 // Config
-const PORT = require("./configs/starter").PORT;
+const PORT = require("./configs/server").PORT;
 
 // Messages
 const starterMessages = require("./helpers/messages/starter");
