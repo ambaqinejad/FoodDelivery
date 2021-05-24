@@ -8,7 +8,6 @@
   font-family: "yekan";
   src: url("/fonts/Yekan/Yekan.eot"); /* IE9 Compat Modes */
   src: url("/fonts/Yekan/Yekan.eot?#iefix") format("embedded-opentype"),
-    /* IE6-IE8 */ url("/fonts/Yekan/Yekan.woff2") format("woff2"),
     /* Super Modern Browsers */ url("/fonts/Yekan/Yekan.woff") format("woff"),
     /* Pretty Modern Browsers */ url("/fonts/Yekan/Yekan.ttf")
       format("truetype"),
@@ -37,8 +36,8 @@ body {
 .form-input {
   border: 2px solid rgba(0, 0, 0, 0.5);
   color: black;
-  border-radius: 15px;
-  padding: 3px !important;
+  border-radius: 8px;
+  padding: 3px 10px !important;
 }
 
 .form-input:focus {
@@ -48,6 +47,22 @@ body {
 .form-hint {
   font-size: 10px;
   color: rgba(138, 0, 0, 1);
+}
+
+.form-necessary-missing {
+  border-color: red;
+}
+
+.form-necessary-error {
+  color: rgba(138, 0, 0, 1);
+}
+
+.hide-error {
+  display: none;
+}
+
+.show-error {
+  display: block;
 }
 
 @media screen and (max-width: 767.98px) {

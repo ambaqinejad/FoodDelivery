@@ -1,86 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <%- include('../../components/libraries/bootstrap-css.ejs') %>
-        <%- include('../../components/custom/general-css.ejs') %>
-            <link rel="stylesheet" href="/css/register.css" />
-            <title>
-                <%= title %>
-            </title>
-</head>
+    <%- include('../../components/libraries/bootstrap-css.ejs') %> <%-
+    include('../../components/custom/general-css.ejs') %>
+    <link rel="stylesheet" href="/css/register.css" />
+    <title><%= title %></title>
+  </head>
 
-<body class="d-flex justify-content-center align-items-center height-100">
-    <div class="container p-3">
-        <div class="row round-border-100 register-bg">
-            <div class="col"></div>
-            <div class="
+  <body class="d-flex justify-content-center align-items-center height-100">
+    <div class="container p-4">
+      <div class="row round-border-100 register-bg">
+        <div class="col"></div>
+        <div
+          class="
             col-sm-12 col-md-8 col-lg-6
             d-flex
             justify-content-center
             align-items-center
             round-border-100-left
             register-form
-          ">
-                <form class="col-8">
-                    <div class="mb-3 col-sm-12">
-                        <label for="restaurant_name" class="form-label mb-2">نام رستوران:</label>
-                        <input type="text" class="form-control form-input" id="restaurant_name" />
-                    </div>
-
-                    <div class="mb-3 col-sm-12">
-                        <label for="restaurant_email" class="form-label mb-2">ایمیل رستوران:</label>
-                        <input type="email" class="form-control form-input mb-2" id="restaurant_email" />
-                        <div id="emailHelp" class="form-text form-hint">
-                            ورود ایمیل رستوران جهت اطلاع رسانی ضروری است.
-                        </div>
-                    </div>
-
-                    <div class="mb-3 col-sm-12">
-                        <label for="restaurant_address" class="form-label mb-2">آدرس رستوران:</label>
-                        <textarea class="restaurant-address form-text form-input" id="restaurant_address"></textarea>
-                    </div>
-
-                    <div class="mb-3 col-sm-12">
-                        <div>
-                            <label for="restaurant_delivery" class="form-label mb-2">پیک موتوری:</label>
-                        </div>
-                        <div class="form-check d-flex align-items-center">
-                            <input class="form-check-input radio-border ms-3" type="radio"
-                                name="restaurant_delivery id=" restaurant_delivery1" checked>
-                            <label class="form-check-label" for="restaurant_delivery1">
-                                دارد
-                            </label>
-                        </div>
-                        <div class="form-check d-flex align-items-center">
-                            <input class="form-check-input radio-border ms-3" type="radio"
-                                name="restaurant_delivery id=" restaurant_delivery2">
-                            <label class="form-check-label" for="restaurant_delivery2">
-                                ندارد
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="mb-3 col-sm-12">
-                        <label for="restaurant_password" class="form-label mb-2">رمز عبور:</label>
-                        <input type="password" class="form-control form-input" id="restaurant_password" />
-                    </div>
-
-                    <div class="mb-3 col-sm-12">
-                        <label for="restaurant_password_again" class="form-label mb-2">تکرار رمز عبور:</label>
-                        <input type="password" class="form-control form-input" id="restaurant_password_again"/>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+          "
+        >
+          <form id="register-form" class="col-8">
+            <div class="mb-2 col-sm-12">
+              <div class="d-flex">
+                <label for="restaurant_name" class="form-label mb-1 ms-3"
+                  >نام رستوران:</label
+                >
+                <p
+                  id="necessary_restaurant_name"
+                  class="form-necessary-error hide-error"
+                >
+                  ضروری
+                </p>
+              </div>
+              <input
+                type="text"
+                class="form-control form-input"
+                id="restaurant_name"
+              />
             </div>
+
+            <div class="mb-2 col-sm-12">
+              <div class="d-flex">
+                <label for="restaurant_email" class="form-label mb-1"
+                  >ایمیل رستوران:</label
+                >
+                <p
+                  id="necessary_restaurant_email"
+                  class="form-necessary-error hide-error"
+                >
+                  ضروری
+                </p>
+              </div>
+              <input
+                type="email"
+                class="form-control form-input mb-1"
+                id="restaurant_email"
+              />
+            </div>
+
+            <div class="mb-2 col-sm-12">
+              <div class="d-flex">
+                <label for="restaurant_address" class="form-label mb-1"
+                  >آدرس رستوران:</label
+                >
+                <p
+                  id="necessary_restaurant_address"
+                  class="form-necessary-error hide-error"
+                >
+                  ضروری
+                </p>
+              </div>
+              <textarea
+                class="restaurant-address form-text form-input"
+                id="restaurant_address"
+              ></textarea>
+            </div>
+
+            <div class="mb-2 col-sm-12 d-flex">
+              <div class="d-flex ms-2">
+                <label for="restaurant_delivery" class="form-label mb-1"
+                  >پیک موتوری:</label
+                >
+                <p
+                  id="necessary_restaurant_delivery"
+                  class="form-necessary-error hide-error"
+                >
+                  ضروری
+                </p>
+              </div>
+              <div class="form-check d-flex me-2">
+                <input
+                  class="form-check-input radio-border ms-2 align-self-center"
+                  type="radio"
+                  name="restaurant_delivery"
+                  id="
+                restaurant_delivery1"
+                  checked
+                />
+                <label class="form-check-label" for="restaurant_delivery1">
+                  دارد
+                </label>
+              </div>
+              <div class="form-check d-flex me-2">
+                <input
+                  class="form-check-input radio-border ms-2 align-self-center"
+                  type="radio"
+                  name="restaurant_delivery"
+                  id="
+                restaurant_delivery2"
+                />
+                <label class="form-check-label" for="restaurant_delivery2">
+                  ندارد
+                </label>
+              </div>
+            </div>
+
+            <div class="mb-2 col-sm-12 d-flex">
+              <div class="d-flex ms-2">
+                <label for="phone-code-input" class="form-label"
+                  >کد تلفن:</label
+                >
+                <p
+                  id="necessary_phone-code-input"
+                  class="form-necessary-error hide-error"
+                >
+                  ضروری
+                </p>
+              </div>
+              <select
+                id="phone-code-input"
+                class="form-select form-input select-input"
+                aria-label="Default select example"
+              ></select>
+            </div>
+
+            <div class="mb-2 col-sm-12">
+              <div class="d-flex">
+                <label for="restaurant_phone" class="form-label mb-1"
+                  >تلفن:</label
+                >
+                <p
+                  id="necessary_restaurant_phone"
+                  class="form-necessary-error hide-error"
+                >
+                  ضروری
+                </p>
+              </div>
+              <input
+                type="number"
+                class="form-control form-input"
+                id="restaurant_phone"
+              />
+            </div>
+
+            <div class="mb-2 col-sm-12">
+              <div class="d-flex">
+                <label for="restaurant_password" class="form-label mb-1"
+                  >رمز عبور:</label
+                >
+                <p
+                  id="necessary_restaurant_password"
+                  class="form-necessary-error hide-error"
+                >
+                  ضروری
+                </p>
+              </div>
+              <input
+                type="password"
+                class="form-control form-input"
+                id="restaurant_password"
+              />
+            </div>
+
+            <div class="mb-2 col-sm-12">
+              <div class="d-flex">
+                <label for="restaurant_password_again" class="form-label mb-1"
+                  >تکرار رمز عبور:</label
+                >
+                <p
+                  id="necessary_restaurant_password_again"
+                  class="form-necessary-error hide-error"
+                >
+                  ضروری
+                </p>
+              </div>
+              <input
+                type="password"
+                class="form-control form-input"
+                id="restaurant_password_again"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
         </div>
+      </div>
     </div>
 
-    <%- include('../../components/libraries/bootstrap-js.ejs') %>
-</body>
-
+    <%- include('../../components/libraries/bootstrap-js.ejs') %> <%-
+    include('../../components/libraries/jquery.ejs') %>
+    <script src="/js/auth/inputValidation.js"></script>
+    <script src="/js/auth/phoneCode.js"></script>
+    <script src="/js/auth/register.js"></script>
+  </body>
 </html>
