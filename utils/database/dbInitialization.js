@@ -8,6 +8,8 @@ const sequelize = new Sequelize(
   {
     dialect: dbConfig.DB_CLIENT,
     host: dbConfig.DB_HOST,
+    charset: "utf8",
+    collate: "utf8_general_ci",
   }
 );
 

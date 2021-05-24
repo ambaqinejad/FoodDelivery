@@ -29,9 +29,7 @@ function fillPhoneCodes() {
 
   for (const index in codes) {
     if (index === 0) {
-      phoneCodeOptions += `<option value="${index + 1}" selected>${
-        codes[index]
-      }</option>`;
+      phoneCodeOptions += `<option value="${codes[index]}" selected>${codes[index]}</option>`;
     } else {
       phoneCodeOptions += `<option value="${index + 1}">${
         codes[index]
@@ -101,7 +99,7 @@ function checkInputIfIsEmpty() {
     addError(necessaryRestaurantAddress, restaurantAddress, "ضروری");
     error = true;
   }
-  if (isEmptyRadio("restaurant_delivery")) {
+  if (isEmptyRadio("delivery")) {
     addError(necessaryRestaurantDelivery, restaurantDelivery, "ضروری");
     error = true;
   }

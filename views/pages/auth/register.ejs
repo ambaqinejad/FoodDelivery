@@ -24,7 +24,12 @@
             register-form
           "
         >
-          <form id="register-form" class="col-8">
+          <form
+            id="register-form"
+            method="post"
+            action="/auth/register"
+            class="col-8"
+          >
             <div class="mb-2 col-sm-12">
               <div class="d-flex">
                 <label for="restaurant_name" class="form-label mb-1 ms-3"
@@ -41,6 +46,8 @@
                 type="text"
                 class="form-control form-input"
                 id="restaurant_name"
+                ,
+                name="name"
               />
             </div>
 
@@ -60,6 +67,7 @@
                 type="email"
                 class="form-control form-input mb-1"
                 id="restaurant_email"
+                name="email"
               />
             </div>
 
@@ -78,6 +86,7 @@
               <textarea
                 class="restaurant-address form-text form-input"
                 id="restaurant_address"
+                name="address"
               ></textarea>
             </div>
 
@@ -97,9 +106,8 @@
                 <input
                   class="form-check-input radio-border ms-2 align-self-center"
                   type="radio"
-                  name="restaurant_delivery"
-                  id="
-                restaurant_delivery1"
+                  name="delivery"
+                  id="restaurant_delivery1"
                   checked
                 />
                 <label class="form-check-label" for="restaurant_delivery1">
@@ -110,9 +118,8 @@
                 <input
                   class="form-check-input radio-border ms-2 align-self-center"
                   type="radio"
-                  name="restaurant_delivery"
-                  id="
-                restaurant_delivery2"
+                  name="delivery"
+                  id="restaurant_delivery2"
                 />
                 <label class="form-check-label" for="restaurant_delivery2">
                   ندارد
@@ -136,6 +143,7 @@
                 id="phone-code-input"
                 class="form-select form-input select-input"
                 aria-label="Default select example"
+                name="phoneCode"
               ></select>
             </div>
 
@@ -155,6 +163,7 @@
                 type="number"
                 class="form-control form-input"
                 id="restaurant_phone"
+                name="phone"
               />
             </div>
 
@@ -174,6 +183,7 @@
                 type="password"
                 class="form-control form-input"
                 id="restaurant_password"
+                name="password"
               />
             </div>
 
